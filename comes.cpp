@@ -36,6 +36,7 @@ class PayLoads{
         BitBlt(desk, rand() % 155, rand() % 255, m, p, desk, rand() % 255, rand() % 155, SRCINVERT);
         PatBlt(desk, 0, 0, m, p, PATINVERT);
       }
+      return 0;
     }
     DWORD WINAPI PL2(LPVOID har){
       HDC desk = GetDC(0);
@@ -46,6 +47,7 @@ class PayLoads{
         BitBlt(desk, rand() % 2, rand() % 2, m, p, desk, rand() % 2, rand() % 2, SRCCOPY);
         PatBlt(desk, rand() % 155, rand() % 255, m, p, PATINVERT);
       }
+      return 0;
     }
   DWORD WINAPI PL3(LPVOID har){
     HDC desk = GetDC(0);
@@ -56,6 +58,7 @@ class PayLoads{
       StretchBlt(desk, rand() % 155, rand() % 255, m - 1, p -1, desk, rand() % 255, rand() % 155, m, p, SRCCOPY);
       PatBlt(desk, rand() % 255, rand() % 355, m, p, PATINVERT);
     }
+    return 0;
   }
   DWORD WINAPI PL4(LPVOID har){
     HDC desk = GetDC(0);
@@ -64,6 +67,7 @@ class PayLoads{
       desk = GetDC(0);
       BitBlt(desk, rand() % 155, rand() % 255, m, p, desk, rand() % 255, rand() % 155, SRCAND);
     }
+    return 0;
   }
   DWORD WINAPI PL5(LPVOID har){
     HDC desk = GetDC(0);
@@ -78,6 +82,7 @@ class PayLoads{
       PatBlt(desk, rand() % 155, rand() % 255, m, p, PATINVERT);
       StretchBlt(desk, rand() % 255, rand() % 155, m - 1, p - 1, desk, rand() % 255, rand() % 155, m, p, SRCCOPY);
     }
+    return 0;
   }
 };
 
